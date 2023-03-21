@@ -188,9 +188,11 @@ namespace Repository
 
             try
             {
+       
 
-  
                 _connection.Open();
+
+             
                 string cadena = "update  Product set Name=@N,Barcode=@B,SalePrice=@S,Amount=@A, Fk_IdCategory=@FK ,Imagen=@I ,Status=@ST Where Id =@Id";
                 _commands = new SqlCommand(cadena, _connection);
                 _commands.Parameters.AddWithValue("N", ProductDTOEdit.Name);

@@ -98,7 +98,7 @@ namespace MarketPlace.Controllers
             }
             catch (Exception e)
             {
-                return NoContent();
+                return BadRequest(e);
 
             }
 

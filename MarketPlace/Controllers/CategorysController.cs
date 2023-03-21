@@ -73,14 +73,14 @@ namespace MarketPlace.Controllers
 
             try
             {
-                var pais = await _category.GetById(id);
+                var data = await _category.GetById(id);
 
-                return Ok(pais);
+                return Ok(data);
 
             }
             catch (Exception e)
             {
-                return NoContent();
+                return BadRequest();
 
             }
 
@@ -102,7 +102,7 @@ namespace MarketPlace.Controllers
                 return BadRequest(new { men = "no se pudo guardar" +e});
 
             }
-            return Ok();
+            return Ok(new { men = "Eliminado con exito" });
         }
 
     }

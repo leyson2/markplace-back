@@ -11,22 +11,23 @@ namespace DTOs
     {
 
 
-        [Required(ErrorMessage = "El campo Nombre es Obligatorio")]
+        [Required(ErrorMessage = "El campo Name es Obligatorio")]
      
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "El campo Barcode es Obligatorio")]
         public string Barcode { get; set; } = null!;
 
-        [Required]
+        [Required(ErrorMessage = "El campo SalePrice es Obligatorio")]
         public Double SalePrice { get; set; }
-        [Required]
+        [Required(ErrorMessage = "El campo Amount es Obligatorio")]
         public int Amount { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "El campo  Fk_IdCategory es Obligatorio")]
         public int Fk_IdCategory { get; set; }
         public string Imagen { get; set; } = null!;
-        [Required]
+
+ 
         public Boolean Status { get; set; } 
  
         public ProductDTOCreate()

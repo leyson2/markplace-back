@@ -9,9 +9,10 @@ namespace DTOs
 {
     public class UserLoginDTO
     {
-        [Required]
+        [Required(ErrorMessage = "El campo  UserName es Obligatorio")]
+
         public string UserName { get; set; } = null!;
-        [Required]
+        [Required(ErrorMessage = "El campo Password es Obligatorio")]
         public string Password { get; set; } = null!;
 
     }

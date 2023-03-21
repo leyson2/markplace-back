@@ -19,7 +19,7 @@ namespace MarketPlace.Controllers
         public ProductsController(IProductRepository product)
         {
             _product = product;
-    
+
         }
 
 
@@ -32,7 +32,7 @@ namespace MarketPlace.Controllers
 
             try
             {
-               this.datos = _product.GetAll();
+                this.datos = _product.GetAll();
             }
             catch (Exception e)
             {
@@ -51,42 +51,43 @@ namespace MarketPlace.Controllers
         public async Task<ActionResult> Post(ProductDTOCreate product)
         {
 
-            try { 
-            if (product is null)
-                return NoContent();
+            try
+            {
+                if (product is null)
+                    return NoContent();
 
 
-             await _product.Add(product);
+                await _product.Add(product);
             }
             catch (Exception e)
             {
-                return BadRequest(new { men = "no se pudo guardar" +e});
+                return BadRequest(new { men = "no se pudo guardar" + e });
 
             }
             return Ok(new { men = "Guardado con exito" });
         }
 
 
-         [HttpGet("{id}")]
-          [ProducesResponseType(StatusCodes.Status204NoContent)]
-          public async Task<ActionResult<ProdctsDTOview>> GetId([FromRoute] int id)
-          {
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public async Task<ActionResult<ProdctsDTOview>> GetId([FromRoute] int id)
+        {
 
-              try
-              {
-                  var pais = await _product.GetById(id);
+            try
+            {
+                var data = await _product.GetById(id);
 
-                  return Ok(pais);
+                return Ok(data);
 
-              }
-              catch (Exception e)
-              {
-                  return NoContent();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
 
-              }
+            }
 
 
-          }
+        }
 
 
 
@@ -99,12 +100,12 @@ namespace MarketPlace.Controllers
             {
                 await _product.Update(id, productDTOEdit);
 
-                return Ok();
+                return Ok(new { men = "Actualizado con exito" });
 
             }
             catch (Exception e)
             {
-                return NoContent();
+                return BadRequest(e);
 
             }
         }
@@ -114,11 +115,22 @@ namespace MarketPlace.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> PostDelete(int id)
         {
-            await _product.Delete(id);
+            try
+            {
+                await _product.Delete(id);
 
 
-            return Ok();
+                return Ok(new { men = "Eliminado con exito" });
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+
+            }
+
         }
+
 
     }
 }
