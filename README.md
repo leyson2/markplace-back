@@ -6,7 +6,7 @@ Fue desarrollado en  .net core 6.
 ## Despliegue
 
 
-1-despues de de clonar el repositorios
+1-despues de de clonar el repositorio
 
 2-verificar que se tenga dotnet version 6 en caso de que no descargar
 
