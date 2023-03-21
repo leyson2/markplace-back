@@ -1,0 +1,12 @@
+C:\Users\NAME\source\repos\MarketPlace\Data\bin\Debug\net6.0\Data.deps.json
+C:\Users\NAME\source\repos\MarketPlace\Data\bin\Debug\net6.0\Data.dll
+C:\Users\NAME\source\repos\MarketPlace\Data\bin\Debug\net6.0\Data.pdb
+C:\Users\NAME\source\repos\MarketPlace\Data\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+C:\Users\NAME\source\repos\MarketPlace\Data\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NAME\source\repos\MarketPlace\Data\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+C:\Users\NAME\source\repos\MarketPlace\Data\obj\Debug\net6.0\Data.AssemblyInfo.cs
+C:\Users\NAME\source\repos\MarketPlace\Data\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\NAME\source\repos\MarketPlace\Data\obj\Debug\net6.0\Data.dll
+C:\Users\NAME\source\repos\MarketPlace\Data\obj\Debug\net6.0\refint\Data.dll
+C:\Users\NAME\source\repos\MarketPlace\Data\obj\Debug\net6.0\Data.pdb
+C:\Users\NAME\source\repos\MarketPlace\Data\obj\Debug\net6.0\ref\Data.dll
