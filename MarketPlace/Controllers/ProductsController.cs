@@ -44,6 +44,7 @@ namespace MarketPlace.Controllers
 
 
         [HttpPost]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -69,6 +70,7 @@ namespace MarketPlace.Controllers
 
 
         [HttpGet("{id}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<ActionResult<ProdctsDTOview>> GetId([FromRoute] int id)
         {
@@ -92,6 +94,7 @@ namespace MarketPlace.Controllers
 
 
         [HttpPut("{id}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<ActionResult> GetId([FromRoute] int id, [FromBody] ProductDTOEdit productDTOEdit)
         {
@@ -113,6 +116,7 @@ namespace MarketPlace.Controllers
 
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<ActionResult> PostDelete(int id)
         {
             try

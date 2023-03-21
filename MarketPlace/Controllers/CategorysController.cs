@@ -1,4 +1,5 @@
 ﻿using DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models;
@@ -8,6 +9,7 @@ namespace MarketPlace.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategorysController : ControllerBase
     {
 
